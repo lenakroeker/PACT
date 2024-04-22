@@ -1,0 +1,175 @@
+body {
+  background: #fcf7ec;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #191918;
+}
+
+footer {
+  height: 80px;
+}
+
+section {
+  width: 80vw;
+  margin: auto;
+  position: relative;
+}
+
+.sectionTitle {
+  opacity: 0;
+  margin: 80px auto 64px auto;
+  text-align: center;
+}
+
+.top {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 48px;
+  height: auto;
+  line-height: 100%;
+  margin-top: 12px;
+}
+
+.fade-in {
+  opacity: 0;
+  --start-margin-top: 150px;
+  --end-margin-top: 80px;
+  margin-top: var(--start-margin-top);
+  animation: titleAnimation 2s ease-in-out forwards;
+}
+
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    margin-top: var(--start-margin-top);
+  }
+  to {
+    opacity: 1;
+    margin-top: var(--end-margin-top);
+  }
+}
+
+@keyframes ctaAnimate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.ctaButton a {
+  position: relative;
+  padding: 0px 30px;
+  display: block;
+  text-decoration: none;
+  width: 100px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: auto;
+}
+
+.ctaButton a span {
+  position: relative;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 1;
+  bottom: -15px;
+}
+
+.ctaButton a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #e9ed39;
+}
+
+@media only screen and (min-width: 682px) {
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-hero {
+    opacity: 0;
+    padding-top: 70px;
+    animation: fadeInAnimation 2s ease-in-out forwards;
+  }
+
+  section {
+    width: calc(100vw - 160px);
+    margin: auto;
+    position: relative;
+  }
+
+  .ctaButton a {
+    width: 85px;
+    height: 50px;
+    border-radius: 26px;
+  }
+
+  .ctaButton a span {
+    bottom: 32px;
+  }
+
+  .ctaButton a .liquid {
+    background: #fcf7ec;
+    box-shadow: inset 0 0 50px #eaed39a2;
+    transition: 1s;
+  }
+
+  .ctaButton a .liquid::after,
+  .ctaButton a .liquid::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+  }
+
+  .ctaButton a .liquid::before {
+    border-radius: 45%;
+    background: #e9ed39;
+    animation: ctaAnimate 10s linear infinite;
+  }
+
+  .ctaButton a .liquid::after {
+    border-radius: 40%;
+    background: #e9ed397b;
+    animation: animate 20s linear infinite;
+  }
+
+  .ctaButton a:hover .liquid {
+    top: -120px;
+  }
+}
+
+@media only screen and (min-width: 868px) {
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      padding-top: 70px;
+    }
+    to {
+      opacity: 1;
+      padding-top: 0;
+    }
+  }
+}

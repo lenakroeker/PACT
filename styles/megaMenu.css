@@ -1,0 +1,188 @@
+/* Mega Menu */
+.menu {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.megaMenu {
+  position: fixed;
+  background: #fcf7ec;
+  border-radius: 20px;
+  width: 94vw;
+  top: 0;
+  margin: 3vw;
+  z-index: 500;
+  transition: 0.5s ease-in-out;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 145px 51px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 145px 51px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 145px 51px rgba(0, 0, 0, 0.48);
+}
+
+.megaMenu.visible {
+  display: flex;
+}
+
+.megaLogo {
+  display: block;
+  width: 25%;
+  margin: 20px auto;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.megaList {
+  width: 49%;
+  text-align: center;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.megaHead {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 25px 0 15px 0;
+  opacity: 0.7;
+}
+
+.megaUl {
+  padding: 0;
+}
+
+.megaLi {
+  font-weight: 500;
+  margin: 18px 0;
+  font-size: 14px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.megaLi:hover {
+  opacity: 0.5;
+}
+
+.megaImageDiv {
+  display: block;
+  width: 100%;
+  margin: 14px 0;
+}
+
+.megaImage {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.megaCaption {
+  margin-left: 30%;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+@media only screen and (min-width: 682px) {
+  .megaList {
+    width: 23%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .megaLi {
+    margin: 14px 0;
+  }
+}
+
+@media only screen and (min-width: 868px) {
+  .megaMenu {
+    border-radius: 32px;
+    width: calc(88.5vw - 64px);
+    margin: 108px 5.4vw 0 5.4vw;
+    padding: 88px 32px 32px 32px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    flex-direction: row;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .megaHead {
+    margin: 0 0 34px 0;
+    font-weight: 400;
+    opacity: 1;
+    font-size: 20px;
+    text-align: left;
+    line-height: 1em;
+  }
+
+  .megaLi {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+  }
+
+  .megaImageDiv {
+    display: none;
+  }
+
+  .megaImage {
+    width: 30%;
+    margin: 0px auto;
+  }
+
+  .megaCaption {
+    margin-left: 30%;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .megaLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .menu {
+    flex-wrap: none;
+    width: 63%;
+  }
+
+  .megaImageDiv {
+    width: 37%;
+    display: block;
+    margin-top: 0;
+  }
+
+  .megaImage {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
