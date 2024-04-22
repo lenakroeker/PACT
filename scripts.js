@@ -60,6 +60,9 @@ window.onload = function () {
   function toggleMegaMenu() {
     megaMenu.classList.toggle("visible");
     shopNavItem.classList.toggle("nav-item-active");
+    if (window.innerWidth < 868) {
+      nav.style.display = "none";
+    }
   }
 
   shopNavItem.addEventListener("click", toggleMegaMenu);
